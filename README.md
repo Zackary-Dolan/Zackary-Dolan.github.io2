@@ -4,8 +4,8 @@ A simple two-page portfolio: a home page and a filterable projects page. No buil
 
 ## Files
 
-- `index.html` – home, about, contact
-- `projects.html` – project cards (edit the `projects` array at the bottom)
+- `index.html` – home
+- `projects.html` – project cards 
 - `style.css` – all styling, with light and dark themes
 - `main.js` – theme toggle and project rendering
 
