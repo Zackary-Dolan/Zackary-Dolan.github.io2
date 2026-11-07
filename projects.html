@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Your Name</title>
+  <meta name="description" content="A selection of projects by Your Name.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (!t && window.matchMedia("(prefers-color-scheme: dark)").matches) t = "dark";
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html">your<span>.</span>name</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+      <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Projects</h1>
+    <p>A selection of things I've built, from side experiments to polished tools.</p>
+  </div>
+
+  <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Your Name</span>
+    <a href="index.html">Back home</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  /* ===== EDIT YOUR PROJECTS HERE =====
+     category: used for the filter buttons
+     emoji / colors: used for the card thumbnail (swap for an `image` later if you like)
+  */
+  const projects = [
+    {
+      title: "Weather Dashboard",
+      description: "A clean forecast app with hourly charts, saved cities and automatic dark mode.",
+      category: "Web App",
+      tags: ["React", "API", "Charts"],
+      emoji: "⛅",
+      colors: ["#5b5bf0", "#8b5cf6"],
+      demo: "https://example.com",
+      code: "https://github.com/your-username/weather-dashboard"
+    },
+    {
+      title: "Task Tracker CLI",
+      description: "A fast command-line to-do manager with tags, due dates and plain-text storage.",
+      category: "Tool",
+      tags: ["Node.js", "CLI"],
+      emoji: "✅",
+      colors: ["#10b981", "#06b6d4"],
+      code: "https://github.com/your-username/task-tracker"
+    },
+    {
+      title: "Recipe Finder",
+      description: "Search recipes by what's already in your fridge. Filters for diet and cooking time.",
+      category: "Web App",
+      tags: ["JavaScript", "API"],
+      emoji: "🍳",
+      colors: ["#f97316", "#ef4444"],
+      demo: "https://example.com",
+      code: "https://github.com/your-username/recipe-finder"
+    },
+    {
+      title: "Markdown Notes",
+      description: "A tiny offline-first notes app with live preview and export to PDF.",
+      category: "Tool",
+      tags: ["TypeScript", "PWA"],
+      emoji: "📝",
+      colors: ["#0ea5e9", "#6366f1"],
+      demo: "https://example.com",
+      code: "https://github.com/your-username/markdown-notes"
+    },
+    {
+      title: "Generative Art Playground",
+      description: "Interactive canvas experiments with noise fields, particles and colour palettes.",
+      category: "Experiment",
+      tags: ["Canvas", "JavaScript"],
+      emoji: "🎨",
+      colors: ["#ec4899", "#f59e0b"],
+      demo: "https://example.com"
+    },
+    {
+      title: "Portfolio Site",
+      description: "This very website: hand-written HTML, CSS and a sprinkle of JS, hosted on GitHub Pages.",
+      category: "Web App",
+      tags: ["HTML", "CSS", "GitHub Pages"],
+      emoji: "🌐",
+      colors: ["#14b8a6", "#3b82f6"],
+      code: "https://github.com/your-username/your-username.github.io"
+    }
+  ];
+
+  renderProjects(projects);
+</script>
+</body>
+</html>

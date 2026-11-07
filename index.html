@@ -1,4 +1,93 @@
-<HTML>
-  <td><p>im real</p></td>
-  <td><H1>Can I please Get a big Mac?</H1></td>
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name — Developer & Designer</title>
+  <meta name="description" content="Portfolio of Your Name: software projects, experiments and writing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (!t && window.matchMedia("(prefers-color-scheme: dark)").matches) t = "dark";
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html">your<span>.</span>name</a>
+    <nav class="nav-links">
+      <a class="active" href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="eyebrow">Available for new projects</span>
+    <h1>I build things for the <em>web</em>.</h1>
+    <p>Hi, I'm Your Name, a developer who likes clean interfaces, useful tools and well-made details. Here's a look at what I've been working on.</p>
+    <div class="cta">
+      <a class="btn primary" href="projects.html">View my projects →</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <h2 class="section-title">About me</h2>
+        <p class="section-sub">A little background.</p>
+        <p>I'm a developer based in Dublin, Ireland. I enjoy taking an idea from a rough sketch to something people actually use, whether that's a small utility, a full web app or a tidy open-source library.</p>
+        <p>Outside of code you'll find me reading, hiking and tinkering with side projects that never quite stay "small".</p>
+      </div>
+      <div class="card-box">
+        <h3>Tools I use</h3>
+        <div class="skills">
+          <span class="chip">JavaScript</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Python</span>
+          <span class="chip">HTML &amp; CSS</span>
+          <span class="chip">Git</span>
+          <span class="chip">Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="card-box">
+        <h2 class="section-title">Let's talk</h2>
+        <p class="section-sub">Have a project, question or just want to say hi?</p>
+        <div class="cta" style="margin-top:0">
+          <a class="btn primary" href="mailto:you@example.com">you@example.com</a>
+          <a class="btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Your Name</span>
+    <a href="projects.html">Projects</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
